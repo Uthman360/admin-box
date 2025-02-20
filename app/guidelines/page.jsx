@@ -34,10 +34,13 @@ const Guidelines = () => {
       fileInputRef.current.value = ""; // Input field reset karna
     }
   };
-  // localStorage se initial active tab set karein
+
   const [activeTab, setActiveTab] = useState(
-    localStorage.getItem("activeTab") || "Terms & Conditions" // Default to "Terms & Conditions" if localStorage is empty
+    typeof window !== "undefined"
+      ? localStorage.getItem("activeTab") || "Terms & Conditions"
+      : "Terms & Conditions"
   );
+
   const [texts, setTexts] = useState({
     "Terms & Conditions":
       "Welcome to FitCircle!\n\nThese terms and conditions outline the rules and regulations for the use of FitCircle’s Website...",
@@ -45,10 +48,11 @@ const Guidelines = () => {
       "Your privacy is important to us. This privacy policy explains how we collect, use, and safeguard your information...",
   });
 
-  // Active tab ko localStorage mein save karein
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-    localStorage.setItem("activeTab", tab); // Save active tab
+    if (typeof window !== "undefined") {
+      localStorage.setItem("activeTab", tab); // Save active tab
+    }
   };
 
   const handleTextChange = (e) => {
