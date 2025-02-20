@@ -1,0 +1,56 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+
+.right_dash {
+  flex: 1; /* Baaki ka full width */
+  background-color: #292a2c;
+  padding: 40px 50px;
+}
+
+.right_dash .dash_head h1 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.right_dash .dash_head h3 {
+  color: #fff;
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+.dash{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.dash_box {
+  width: 200px;
+  height: 120px;
+  background-color: #363738;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 17.89px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+}
+.dash_box h2{
+    color: #26A7CD;
+    font-size: 46.68px;
+    
+}
+.dash_box h4{
+    font-size: 13.23px;
+    color: #757575;
+}
+.dash_box:hover{
+    border: 2px solid #26A7CD;
+}

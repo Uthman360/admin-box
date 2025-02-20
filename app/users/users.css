@@ -1,0 +1,73 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.right_dash {
+  flex: 1; /* Baaki ka full width */
+  background-color: #292a2c;
+  padding: 40px 50px;
+}
+.coaches_heading h2 {
+  color: var(--white);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.head_co {
+  display: flex;
+  justify-content: space-between;
+}
+.coaches_head {
+  display: flex;
+  flex-flow: row wrap;
+  width: 545px;
+}
+.co {
+  flex: 1;
+  color: var(--white);
+
+}
+.co .filter,
+.trainer,
+.download {
+  width: 150px;
+  height: 44px;
+  background-color: #363738;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px;
+}
+.co .filter:hover,
+.trainer:hover,
+.download:hover {
+  background-color: #4a4a4a;
+  transform: scale(1.02);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.co .trainer {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.co .search {
+  width: 377px;
+  height: 44px;
+  background-color: #363738;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px;
+}
+.co .search img {
+  padding: 20px;
+}
+.co .search input {
+  width: 377px;
+  height: 44px;
+  background-color: #363738;
+  border-radius: 10px;
+  color: var(--white);
+  outline: none;
+}

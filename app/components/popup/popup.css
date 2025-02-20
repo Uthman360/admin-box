@@ -1,0 +1,128 @@
+:root {
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --modal-bg: #2c2c2c;
+  --border-color: #c4c4c4;
+  --text-color: #fff;
+  --input-bg: #363738;
+  --highlight-color: #24a5cc;
+  --error-color: #ff5555;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  color: var(--text-color);
+  backdrop-filter: blur(50px);
+}
+
+/* === Modal Container === */
+.modal {
+  background: var(--modal-bg);
+  border-radius: 30px;
+  width: 546px;
+  max-width: 90%;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+  font-size: 1.2rem;
+  margin-top: -11px;
+}
+
+.modal h4 {
+  color: var(--border-color);
+  font-size: 13px;
+  text-align: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 5px;
+  width: 7px;
+}
+
+.close-btn:hover {
+  color: var(--error-color);
+}
+
+/* === Modal Body (Checkboxes) === */
+.modal-body {
+  margin-top: 22px;
+}
+
+.modal-body .input_box input {
+  width: 452px;
+  height: 50px;
+  background-color: var(--input-bg);
+  padding: 0 20px;
+  color: var(--text-color);
+  outline: none;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"] {
+  appearance: none;
+}
+
+.modal-body .input_box {
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-label img {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5%;
+}
+
+.checkbox-label input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--highlight-color);
+  border-radius: 6px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: var(--highlight-color);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

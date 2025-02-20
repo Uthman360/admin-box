@@ -1,0 +1,140 @@
+"use client";
+import React, { useState } from "react";
+import "./table.css";
+import Confirm from "../Confirm/Confirm";
+import Link from "next/link";
+import Image from "next/image";
+const Table = ({ Interest }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [step, setStep] = useState(1);
+  const staticData = [
+    {
+      name: "John Doe",
+      email: "johndoe@example.com",
+      phone: "+11234567890",
+      country: "USA",
+      age: 34,
+      gender: "Male",
+      interests: ["Power", "Agility"],
+    },
+    {
+      name: "Jane Smith",
+      email: "janesmith@example.com",
+      phone: "+19876543210",
+      country: "Canada",
+      age: 28,
+      gender: "Female",
+      interests: ["Balance"],
+    },
+    {
+      name: "Alice Johnson",
+      email: "alicejohnson@example.com",
+      phone: "+15555555555",
+      country: "UK",
+      age: 45,
+      gender: "Other",
+      interests: ["Strength", "Endurance"],
+    },
+    {
+      name: "Bob Brown",
+      email: "bobbrown@example.com",
+      phone: "+16666666666",
+      country: "Australia",
+      age: 22,
+      gender: "Male",
+      interests: ["Power", "Agility", "Balance"],
+    },
+    {
+      name: "Charlie Davis",
+      email: "charliedavis@example.com",
+      phone: "+17777777777",
+      country: "Germany",
+      age: 30,
+      gender: "Female",
+      interests: ["Power"],
+    },
+  ];
+  return (
+    <div className='relative overflow-x-auto shadow-md sm:rounded-lg mt-[35px]'>
+      <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 '>
+        <thead className='border-b border-white border-white'>
+          <tr>
+            <th scope='col' className='px-4 py-6'>
+              Full name
+            </th>
+            <th scope='col' className='px-4 py-6'>
+              Email
+            </th>
+            <th scope='col' className='px-4 py-6'>
+              Phone Number
+            </th>
+            <th scope='col' className='px-4 py-6'>
+              Country
+            </th>
+            <th scope='col' className='px-4 py-6'>
+              Age
+            </th>
+            <th scope='col' className='px-4 py-6'>
+              Sex
+            </th>
+            <th scope='col' className='px-4 py-6'>Interest</th>
+          </tr>
+        </thead>
+        <tbody>
+        {staticData.map((row, index) => (
+          <tr key={index} className='border-b border-white'>
+            <th scope='row' className='px-8 py-6 font-medium text-white whitespace-nowrap'>
+              <Link href={"/user-details"} className='cursor-pointer'>
+                {row.name}
+              </Link>
+            </th>
+            <td className='px-4 py-4'>{row.email}</td>
+            <td className='px-4 py-4'>{row.phone}</td>
+            <td className='px-4 py-4'>{row.country}</td>
+            <td className='px-4 py-4'>{row.age}</td>
+            <td className='px-4 py-4'>{row.gender}</td>
+            {Interest ? (
+              <td>
+                {row.interests.map((interest, i) => (
+                  <span key={i} className='tag-interest'>
+                    {interest}
+                  </span>
+                ))}
+              </td>
+            ) : (
+              <td className='px-4 py-4'>
+                <button
+                  className='font-medium text-blue-600 hover:underline'
+                  onClick={() => setShowPopup(true)}
+                >
+                  <Image width={45} height={45} src='/icons/Frame.png' alt='Frame' />
+                </button>
+              </td>
+            )}
+          </tr>
+        ))}
+      </tbody>
+      </table>
+      {showPopup && step === 1 && (
+        <Confirm
+          title='Inform them'
+          desc='Are you sure you want to delete this Trainer?'
+          closePopup={() => setShowPopup(false)}
+          onClick={() => setStep(2)}
+          istrue={true}
+        />
+      )}
+      {step === 2 && (
+        <Confirm
+          title='You removed a Trainer'
+          closePopup={() => {
+            setShowPopup(false);
+            setStep(1);
+          }}
+        />
+      )}
+    </div>
+  );
+};
+
+export default Table;

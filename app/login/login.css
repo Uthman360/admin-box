@@ -1,0 +1,31 @@
+
+.right_side {
+  background-color: var(--primary-bg) !important;
+}
+
+.right_side h3 {
+  color: var(--primary-text);
+}
+
+.form_box {
+  background-color: var(--secondary-bg);
+}
+
+.form_box .input_box .in_box {
+  background-color: var(--primary-bg);
+}
+
+.form_box .input_box .in_box input {
+  background-color: var(--primary-bg);
+  border-left: 2px solid var(--border-color);
+  color: var(--white);
+}
+
+.form_box .input_box h4 {
+  color: var(--secondary-text);
+}
+
+.form_box .input_box h4 a {
+  color: var(--primary-text);
+  font-weight: 700;
+}

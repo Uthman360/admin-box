@@ -1,0 +1,11 @@
+td{
+    color:#fff !important;
+}
+.tag-interest {
+    background: #363738;
+    color: var(--white);
+    padding: 5px 6px;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+  }

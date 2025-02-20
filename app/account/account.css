@@ -1,0 +1,102 @@
+
+.col {
+  flex: 1;
+  padding: 80px 25px;
+}
+
+.left_side {
+  background-image: url("/images/Splash.png");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.image-section img {
+  max-width: 133.98px;
+  max-height: 227px;
+  object-fit: contain;
+}
+
+.right_side {
+  background-color: var(--primary-bg) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right_side h3 {
+  color: var(--primary-text);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 31px;
+}
+
+.form_box {
+  background-color: var(--secondary-bg);
+  width: 464px;
+  border-radius: 15px;
+  padding: 60px 0px;
+}
+
+.form_box .input_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_box .input_box .in_box {
+  width: 349px;
+  height: 57px;
+  background-color: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.form_box .input_box .in_box img,
+svg {
+  width: 25px;
+  height: 19px;
+  margin: 0 20px !important;
+}
+
+.form_box .input_box .in_box input {
+  width: 349px;
+  height: 57px;
+  background-color: var(--input-bg);
+  border-left: 2px solid var(--border-color);
+  padding: 0 20px;
+  color: var(--white);
+  outline: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.form_box .input_box h4 {
+  color: var(--secondary-text);
+  font-size: 16px;
+}
+
+.form_box .input_box h4 a {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+}
