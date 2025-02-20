@@ -43,9 +43,9 @@ const Guidelines = () => {
 
   const [texts, setTexts] = useState({
     "Terms & Conditions":
-      "Welcome to FitCircle!\n\nThese terms and conditions outline the rules and regulations for the use of FitCircle’s Website...",
+      "Welcome to FitCircle!   <br /><br />\n\nThese terms and conditions outline the rules and regulations for the use of FitCircle’s Website... <br /><br /> Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit.",
     "Privacy Policy":
-      "Your privacy is important to us. This privacy policy explains how we collect, use, and safeguard your information...",
+      "Your privacy is important to us. <br /> <br /> This privacy policy explains how we collect, use, and safeguard your information... <br /> <br /> We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.",
   });
 
   const handleTabClick = (tab) => {

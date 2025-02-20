@@ -38,7 +38,7 @@ const FAQSection = () => {
       )}
       {faqs.map((faq, index) => (
         <div key={index} className='mt-4 p-4 h-[180px] bg-[#363738] rounded-md'>
-          <p className='text-[14px] mt-2'  style={{lineHeight:"28px"}}>{faq.answer}</p>
+          <p className='text-[15px] mt-2'  style={{lineHeight:"28px"}}>{faq.answer}</p>
         </div>
       ))}
 

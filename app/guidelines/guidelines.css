@@ -52,7 +52,7 @@
 }
 
 
-.guide_dash ul li:hover 
+.guide_dash ul li:hover, 
 .guide_dash ul li.active{
   background-color: #363738;
   box-shadow: 4px 4px 30px -10px #b9b9b933;
