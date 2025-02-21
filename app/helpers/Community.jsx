@@ -38,20 +38,23 @@ const Community = () => {
         <div>
           {communities.map((_, index) => (
             <div key={index} className='flex gap-4 mb-8'>
-              <button className='p-2 rounded-full border border-[#24a5cc] text-blue-500  hover:text-white'>
+              <button className='p-2 rounded-full border border-[#24a5cc] text-blue-500 hover:bg-[#24a5cc] hover:text-white flex items-center justify-center group'>
                 <Image
                   src={"/icons/pencil.png"}
                   width={20}
                   height={20}
                   alt='pencil'
+                  className='w-5 h-5 transition duration-200 group-hover:invert group-hover:brightness-0'
                 />
               </button>
-              <button className='p-2 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white'>
+
+              <button className='p-2 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white flex items-center justify-center'>
                 <Image
                   src={"/icons/Delete.png"}
                   width={20}
                   height={20}
                   alt='Delete'
+                  className='w-5 h-5 transition duration-200 hover:invert hover:brightness-0'
                 />
               </button>
             </div>
