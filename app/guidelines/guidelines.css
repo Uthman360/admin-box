@@ -64,7 +64,10 @@
   background-color: var(--primary-bg);
   padding: 40px 50px;
 }
+svg{
+  margin:  0 !important;
 
+}
 .terms svg {
   width: 36px !important;
   margin:  0 !important;
