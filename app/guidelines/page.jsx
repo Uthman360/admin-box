@@ -55,12 +55,7 @@ const Guidelines = () => {
     }
   };
 
-  const handleTextChange = (e) => {
-    setTexts((prevTexts) => ({
-      ...prevTexts,
-      [activeTab]: e.target.value,
-    }));
-  };
+
   useEffect(() => {
     setShowPopup(false);
   }, [activeTab]);
@@ -115,7 +110,6 @@ const Guidelines = () => {
                     <h2 className='text-lg font-semibold mb-2'>{activeTab}</h2>
                     <TextArea
                       value={texts[activeTab]}
-                      onChange={handleTextChange}
                     />
                   </div>
                   {showPopup && (

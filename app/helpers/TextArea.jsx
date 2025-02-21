@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useRef } from "react";
 
-const TextArea = ({ value, onChange }) => {
+const TextArea = ({ value }) => {
   const textAreaRef = useRef(null);
 
   // Set initial value

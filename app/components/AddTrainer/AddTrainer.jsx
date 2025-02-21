@@ -14,7 +14,6 @@ const AddTrainer = ({ closePopup,onClick }) => {
         <h4>
           Note: You are required to give a temporary password to your Trainer
         </h4>
-
         <div className='modal-body' style={{display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column"}}> 
           <div className='input_box'>
             <input type='text' placeholder='Full name' />
@@ -31,7 +30,6 @@ const AddTrainer = ({ closePopup,onClick }) => {
           <div className='input_box'>
             <input type='text' placeholder='Temporary Password: ABC123' />
           </div>
-
         </div>
         <div className='modal-footer'>
         <div onClick={onClick}><Button name={"Send to email"} height="45" radius="50" /></div>

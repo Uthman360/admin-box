@@ -16,61 +16,58 @@ const options = [
 ];
 
 const Popup = ({ closePopup }) => {
-  const [checkedItems, setCheckedItems] = useState([
+  const [checkedItems, setCheckedItems] = useState(new Set([
     "Body Builder Coach",
     "Strength and Conditioning Coach",
-  ]);
+  ]));
   const [step, setStep] = useState(1);
 
   const handleCheckboxChange = (option) => {
-    setCheckedItems((prev) =>
-      prev.includes(option)
-        ? prev.filter((item) => item !== option)
-        : [...prev, option]
-    );
+    setCheckedItems((prev) => {
+      const newChecked = new Set(prev);
+      newChecked.has(option) ? newChecked.delete(option) : newChecked.add(option);
+      return newChecked;
+    });
   };
 
   return (
-    <div className='step'>
+    <div className="step">
       {step === 1 && (
-        <div className='modal-overlay'>
-          <div className='modal'>
-            <div className='modal-header'>
+        <div className="modal-overlay">
+          <div className="modal">
+            <div className="modal-header">
               <h2>Add Trainer</h2>
-              <button className='close-btn' title='Close' onClick={closePopup}>
+              <button className="close-btn" title="Close" onClick={closePopup}>
                 &times;
               </button>
             </div>
 
-            <div className='modal-body'>
+            <div className="modal-body">
               {options.map((option) => (
-                <label key={option} className='checkbox-label'>
+                <label key={option} className="checkbox-label">
                   <input
-                    type='checkbox'
-                    checked={checkedItems.includes(option)}
+                    type="checkbox"
+                    checked={checkedItems.has(option)}
                     onChange={() => handleCheckboxChange(option)}
                   />
-                  {checkedItems.includes(option) && (
-                    <Image src="/images/Icon.png" width={100} height={100} alt="Check" />
+                  {checkedItems.has(option) && (
+                    <Image src="/images/Icon.png" width={24} height={24} alt="Check" />
                   )}
                   {option}
                 </label>
               ))}
             </div>
 
-            <div className='modal-footer'>
-              <div onClick={() => setStep(2)}>
-                <Button name='Next' height='45' radius='50' />
-              </div>
+            <div className="modal-footer">
+              <button onClick={() => setStep(2)}>
+                <Button name="Next" height="45" radius="50" />
+              </button>
             </div>
           </div>
         </div>
       )}
 
-      {step === 2 && (
-        <AddTrainer closePopup={closePopup} onClick={() => setStep(3)} />
-      )}
-
+      {step === 2 && <AddTrainer closePopup={closePopup} onClick={() => setStep(3)} />}
       {step === 3 && <Confirm title="You sent an email to the trainer!" closePopup={closePopup} />}
     </div>
   );
