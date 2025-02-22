@@ -12,7 +12,7 @@ const Account = () => {
     <FormWrapper>
       <div className="left_side col">
         <div className="image-section">
-          <img src="/images/logo.png" alt="Logo" />
+        <Image width={150} height={150} src="/images/logo.png" alt="Logo" />
         </div>
       </div>
       <div className="right_side col">

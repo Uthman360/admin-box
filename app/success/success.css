@@ -40,9 +40,10 @@
 
 }
 .suc_box h3{
-    font-size: 20px;
-    color: var(--white);
-    margin-top: 16px;
-    margin-bottom: 30px;
+  font-size: 20px  !important;
+  color: var(--white)  !important;
+  margin-top: 16px  !important;
+  margin-bottom: 30px  !important;
+  font-weight: 400 !important;
 
 }
