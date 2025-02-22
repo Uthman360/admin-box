@@ -1,29 +1,29 @@
 import React from "react";
 import "./success.css";
 import FormWrapper from "../helpers/FormWrapper";
-import Button from "../helpers/Button";
-import FormBox from "../helpers/FormBox";
-import Link from "next/link";
 import Image from "next/image";
+import LeftSide from "../components/server/LeftSide/LeftSide";
+import RightSide from "../components/server/RightSide/RightSide";
+
 const SuccessPage = () => {
   return (
     <FormWrapper>
-      <div className='left_side col'>
-        {" "}
-        <div className='image-section'>
-        <Image width={150} height={150} src="/images/logo.png" alt="Logo" />
-        </div>
-      </div>
-      <div className='right_side col'>
-        <FormBox>
+      <LeftSide />
+      <RightSide
+        customContent={
           <div className='suc_box'>
-          <Image width={100} height={100} src='/icons/success.png' alt='success' />
+            <Image
+              width={100}
+              height={100}
+              src='/icons/success.png'
+              alt='success'
+            />
             <h3>Account has created successful</h3>
-            <Link href={'/login'}><Button name={"Login"} width={'350'}></Button>
-            </Link>
           </div>
-        </FormBox>
-      </div>
+        }
+        buttonText="Login"
+        linkHref="/login"
+      />
     </FormWrapper>
   );
 };

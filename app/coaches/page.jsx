@@ -1,6 +1,6 @@
 import CoachesClient from "../components/client/CoachesClient";
 import Pagination from "../components/server/Pagination/Pagination";
-import Table from "../components/Tables/Table";
+import Table from "../components/server/Tables/Table";
 import Sidebar from "../helpers/Sidebar";
 import "./coaches.css";
 

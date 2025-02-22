@@ -1,5 +1,5 @@
 .btn {
-  background-color: var(--primary-text);
+  background-color: var(--side-btn);
   max-width: 100%;
   height: 57px;
   border-radius: 12px;
@@ -43,9 +43,10 @@
 }
 
 .left_dash ul li:hover {
-  background-color: #13728C; /* Hover effect */
+  background-color: var(--side-btn);
 }
 .left_dash ul li.active {
-  background-color: #13728C; /* Active color */
+  background-color: var(--side-btn);
   color: white;
 }
+

@@ -1,4 +1,4 @@
-import TableClient from "../client/TableClient";
+import TableClient from "../../client/TableClient";
 import "./table.css";
 
 const Table = ({ Interest }) => {

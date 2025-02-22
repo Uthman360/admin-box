@@ -1,37 +1,3 @@
-.col{
-    flex: 1;
-    /* margin: 0.5rem; */
-    padding: 80px 25px;
-}
-.left_side {
-    background-image: url("/images/Splash.png");
-    background-size: cover;
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 100%;
-  }
-  
-  .image-section img {
-    max-width: 133.98px;
-    max-height: 227px;
-    object-fit: contain;
-  }
-  
-  .right_side {
-    background-color: var(--primary-bg) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
 .suc_box{
     display: flex;
     align-items: center;
@@ -43,7 +9,7 @@
   font-size: 20px  !important;
   color: var(--white)  !important;
   margin-top: 16px  !important;
-  margin-bottom: 30px  !important;
+  margin-bottom: 0px  !important;
   font-weight: 400 !important;
 
 }

@@ -1,0 +1,22 @@
+
+.left_side {
+    background-image: url("/images/Splash.png");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .image-section img {
+    max-width: 133.98px;
+    max-height: 227px;
+    object-fit: contain;
+  }
