@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import "./popup.css";
 import Button from "@/app/helpers/Button";
-import AddTrainer from "../AddTrainer/AddTrainer";
-import Confirm from "../Confirm/Confirm";
+import AddTrainer from "../server/AddTrainer/AddTrainer";
+import Confirm from "../server/Confirm/Confirm";
 import Image from "next/image";
 
 const options = [
@@ -15,7 +14,7 @@ const options = [
   "Influencer",
 ];
 
-const Popup = ({ closePopup }) => {
+const ModalPopup = ({ closePopup }) => {
   const [checkedItems, setCheckedItems] = useState(new Set([
     "Body Builder Coach",
     "Strength and Conditioning Coach",
@@ -73,4 +72,4 @@ const Popup = ({ closePopup }) => {
   );
 };
 
-export default Popup;
+export default ModalPopup;

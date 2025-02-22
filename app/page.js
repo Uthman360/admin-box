@@ -1,4 +1,4 @@
-import Front from "./components/Front/Front";
+import Front from "./components/server/Front/Front";
 
 export default function Home() {
   return (

@@ -1,8 +1,9 @@
-"use client"
+"use client";
+
 import { useState } from "react";
 
-const Pagination = ({ totalPages = 3 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const PaginationClient = ({ totalPages, initialPage }) => {
+  const [currentPage, setCurrentPage] = useState(initialPage);
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -11,14 +12,12 @@ const Pagination = ({ totalPages = 3 }) => {
   };
 
   return (
-    <div className="flex items-center justify-between w-full p-4 mt-[31px] bg-[#292a2c] text-white">
+    <div className="flex items-center justify-between w-full p-4 bg-[#292a2c] text-white">
       <span className="text-sm">Showing 1 to 10 of 200 entries</span>
 
       <div className="flex items-center space-x-2">
         <button
-          className={`px-3 py-1 rounded-md ${
-            currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"
-          }`}
+          className={`px-3 py-1 rounded-md ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -40,9 +39,7 @@ const Pagination = ({ totalPages = 3 }) => {
         ))}
 
         <button
-          className={`px-3 py-1 rounded-md ${
-            currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"
-          }`}
+          className={`px-3 py-1 rounded-md ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700"}`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
@@ -53,4 +50,4 @@ const Pagination = ({ totalPages = 3 }) => {
   );
 };
 
-export default Pagination;
+export default PaginationClient;

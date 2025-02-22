@@ -27,7 +27,7 @@ const Login = () => {
               <LiaLockSolid width={30} height={30} color='#c4c4c4' />
               <input type='text' placeholder='Password' />
             </div>
-            <h4 style={{ marginTop: "20px" }}>
+            <h4 style={{ marginTop: "20px"}}>
               <Link href={"/forgot-password"}>Forgot Password?</Link>
             </h4>
             <Link href={"/dashboard"}>

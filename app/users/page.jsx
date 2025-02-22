@@ -3,7 +3,7 @@ import Sidebar from "../helpers/Sidebar";
 import Image from "next/image";
 import "./users.css";
 import Table from "../components/Tables/Table";
-import Pagination from "../components/Pagination/Pagination";
+import Pagination from "../components/server/Pagination/Pagination";
 const Users = () => {
   return (
     <div className='row'>

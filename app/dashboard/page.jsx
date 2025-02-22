@@ -1,6 +1,5 @@
 import React from "react";
 import "./dashboard.css";
-import Link from "next/link";
 import Sidebar from "../helpers/Sidebar";
 const Dashboard = () => {
   return (

@@ -5,7 +5,7 @@
 }
 .right_dash {
   flex: 1; /* Baaki ka full width */
-  background-color: #292a2c;
+  background-color: var(--secondary-bg);
   padding: 40px 50px;
 }
 .coaches_heading h2 {
@@ -32,7 +32,7 @@
 .download {
   width: 150px;
   height: 44px;
-  background-color: #363738;
+  background-color: var(--primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@
 .co .search {
   width: 377px;
   height: 44px;
-  background-color: #363738;
+  background-color: var(--primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@
 .co .search input {
   width: 377px;
   height: 44px;
-  background-color: #363738;
+  background-color: var(--primary-bg);
   border-radius: 10px;
   color: var(--white);
   outline: none;

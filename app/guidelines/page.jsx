@@ -8,7 +8,7 @@ import TextArea from "../helpers/TextArea";
 import "./guidelines.css";
 import FAQSection from "../helpers/FAQ";
 import PostCom from "../helpers/Post";
-import Confirm from "../components/Confirm/Confirm";
+import Confirm from "../components/server/Confirm/Confirm";
 import ListItems from "../helpers/List";
 import Community from "../helpers/Community";
 import Image from "next/image";
